@@ -12,7 +12,9 @@ module.exports = [{
     path: path.resolve(__dirname, "dist"),
     filename: "host.js"
   },
-  externals: [nodeExternals()],
+  externals: [nodeExternals({
+    modulesFromFile: true
+  })],
   module: {
     rules: [{
       enforce: "pre",
